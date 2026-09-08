@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import Home from "./pages/Home.jsx"
+import Favorites from './pages/Favorites.jsx'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-    <Home></Home>
-    </>
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
+      </Routes>
+    </main>
+    </> 
     )
 }
 
